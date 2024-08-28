@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title> ТРКД ДНУ . ASP.NET CORE MVC </title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h1>Дисципліна ТРКД</h1>
+    <p>@DateTime.Now</p>
+    @{
+        int x = 10;
+        int y = 20;
+        int sum = x + y;
+    }
+    <p>Сума чисел @x і @y дорівнює @sum</p>
+    @{
+        string morning = "Доброе Утрo";
+        string evening = "Добрый Вечер";
+        int hour = DateTime.Now.Hour;
+    }
+    @if (hour <= 12)
+    {
+        <h2>@morning</h2>
+    }
+    else
+    {
+        <h2>@evening</h2>
+    }
+    <ol>
+        @for (int i = 1; i <= 5; i++)
+        {
+            <li>Елемент @i</li>
+        }
+    </ol>
+
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>@item</li>
+        }
+    </ul>
+    <p>@GetMessage()</p>
+    @functions {
+        public string GetMessage()
+        {
+            return "ОКРОШКА";
+        }
+    }
+</body>
+</html>

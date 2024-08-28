@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>        
+        body {
+            background-image: url("https://cdn.kanobu.ru/articles/pics/a24eada2-f539-4cbc-bbcb-5d3840c1e2d2.jpg");
+            font-family: Arial, sans-serif;
+            background-size: cover;
+            margin-left: 20px;
+            text-align: left;
+            color: #fff;
+        }
+
+        h2 {
+            color: white;
+            font-size: 40px;
+            font-family: 'montserrat';
+            text-decoration: none;
+            text-transform: uppercase;
+            overflow: hidden;
+            text-shadow: 0px 0px 5px #ff00ff, 0px 0px 10px #ff00ff, 0px 0px 15px #ff00ff, 0px 0px 20px #ff00ff;
+            transition: 1s all ease;
+        }
+
+        h2:hover {
+            text-shadow: none;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>User Profile</h2>
+
+<p>User Name: @ViewBag.Username</p>
+<p>Password: @ViewBag.Password</p>
+<p>Age: @ViewBag.Age</p>
+<p>Group: @ViewBag.Group</p>
+<p>Specialization: @ViewBag.Specialization</p>
+<p>Comment: @ViewBag.Comment</p>
+
+</body>
+</html>

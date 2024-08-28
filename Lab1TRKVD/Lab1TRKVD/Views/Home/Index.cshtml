@@ -1,0 +1,95 @@
+﻿@{
+    Layout = null;
+}
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Анкета</title>
+    <style>
+        body {
+            background-color: #77a8f7;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+        }
+
+        .info {
+            flex: 2;
+            padding-right: 20px;
+        }
+
+        .photo {
+            flex: 1;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="info">
+            <h1>Рак Данило Олександрович</h1>
+            <h2><b>Програміст</b></h2>
+
+            <p><strong>Мобільний телефон:</strong> +380973678731</p>
+            <p><strong>Ел. пошта:</strong> mrfunny5359@gmail.com</p>
+            <p><strong>Вік:</strong> 18 років (25.07.2004)</p>
+            <p><strong>Проживання:</strong> м. Кривий Ріг</p>
+
+            <p><strong>Мови:</strong></p>
+            <ul>
+                <li>Українська – вільно</li>
+                <li>Російська – вільно</li>
+                <li>Англійська – середній</li>
+            </ul>
+
+            <h2>Коротка інформація</h2>
+            <p>Студент, без досвіду роботи, готовий навчатися та розвиватися.</p>
+
+            <h2>Навички</h2>
+            <ul class="skills">
+                <li>Мова розмітки HTML, каскадні таблиці стилів CSS.</li>
+                <li>Мова програмування C#.</li>
+                <li>Об'єктно-орієнтоване програмування.</li>
+                <li>База даних, система управління базами даних (СУБД) SQL Server, мова SQL.</li>
+            </ul>
+
+            <h2>Досвід роботи</h2>
+            <p>Наразі відсутній досвід роботи.</p>
+        </div>
+        <div class="photo">
+            <img src="https://i.obozrevatel.com/gallery/2021/11/25/26089682451925087574436761337575292305633641n.jpg" alt="Photo">
+        </div>
+    </div>
+</body>
+</html>

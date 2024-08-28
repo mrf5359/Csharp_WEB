@@ -1,0 +1,61 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using Lab8TRKVD.Models;
+@model MyViewModel;
+<a asp-controller="Home" asp-action="Contacts">Контакти</a>
+<br />
+<a asp-controller="Home" asp-action="About" asp-host="localhost.com" asp-protocol="https">Про сайт</a>
+<br />
+<a asp-controller="Home" asp-action="GetPerson" asp-route-id="2" asp-route-age="20" asp-route-name="Taras">Person: 2 Taras 20</a>
+<br />
+<a asp-controller="Home" asp-action="GetPerson" asp-all-route-data='new Dictionary<string,string> { { "id", "2"}, {"name", "Taras" }, { "age", "20" } }'> Person: 2 Taras 20</a>
+<br />
+
+<p>
+    <a asp-controller="Home" asp-action="Index">Home</a>
+</p>
+<p>
+    <a asp-controller="Book" asp-action="Index">Book</a>
+</p>
+<p>
+    <a asp-route="book">Book</a>
+</p>
+<p>
+    <a asp-route="Create">Create</a>
+</p>
+
+<form action="/Home/SubmitForm" method="post">
+    <label asp-for="TextValue">Текстове поле:</label>
+    <input asp-for="TextValue" />
+
+    <label asp-for="NumericValue">Числове поле:</label>
+    <input asp-for="NumericValue" />
+
+    <label asp-for="Password">Пароль:</label>
+    <input asp-for="Password" type="password" />
+
+    <label asp-for="IsChecked">Checkbox:</label>
+    <input asp-for="IsChecked" type="checkbox" />
+
+    <label asp-for="SelectedOption">Radio Button:</label>
+    <input asp-for="SelectedOption" value="Option1" type="radio" />
+    <input asp-for="SelectedOption" value="Option2" type="radio" />
+
+    <label asp-for="SelectedValue">Вибрати зі списку:</label>
+    <select asp-for="SelectedValue">
+        <option value="1">Опція 1</option>
+        <option value="2">Опція 2</option>
+        <option value="3">Опція 3</option>
+    </select>
+
+    <button type="submit">Відправити</button>
+</form>
+@if (Model != null)
+{
+    <h4>Введені дані:</h4>
+    <p>Текстове поле: @Model.TextValue</p>
+    <p>Числове поле: @Model.NumericValue</p>
+    <p>Пароль: @Model.Password</p>
+    <p>Checkbox: @Model.IsChecked</p>
+    <p>Radio Button: @Model.SelectedOption</p>
+    <p>Вибрати зі списку: @Model.SelectedValue</p>
+}

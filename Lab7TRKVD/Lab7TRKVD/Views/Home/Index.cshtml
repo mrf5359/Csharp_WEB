@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Ваша веб-страница</title>
+    <style>
+        body {
+            background-image: url("https://wallbox.ru/resize/1920x1080/wallpapers/main2/201715/rajan-gosling1.jpg");
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #ffa;
+            text-align: center;
+        }
+
+
+
+        form {
+            width: 300px;
+            margin: 20px auto;
+        }
+
+        label {
+            font-size: 20px;
+            display: block;
+            display: flex; 
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        input, textarea, select {
+            width: calc(100% - 22px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: none; 
+            border-radius: 10px; 
+            outline: none; 
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+            transform: scale(1.5);
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 10px;
+            width: 100%;
+        }
+
+        .radio-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+        }
+
+        .radio-group label {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Добро пожаловать на вашу веб-страницу</h1>
+
+    <h2>User Form</h2>
+    <form method="post" action="@Url.Action("SubmitForm", "Home")">
+        <p>
+            <label>User Name:</label><br />
+            <input type="text" name="username" />
+        </p>
+        <p>
+            <label>Password:</label><br />
+            <input type="password" name="password" />
+        </p>
+        <p>
+            <label>Age:</label><br />
+            <input type="number" name="age" />
+        </p>
+        <p>
+            <label>Group:</label><br />
+            <input type="radio" name="group" value="КИ-21-1" /> КИ-21-1
+            <input type="radio" name="group" value="КИ-21-2" /> КИ-21-2
+        </p>
+        <p>
+            <label>Specialization:</label>
+            <select name="specialization">
+                <option value="ТРКВД">ТРКВД</option>
+                <option value="Java">Java</option>
+                <option value="ОБД">ОБД</option>
+            </select>
+        </p>
+        <p>
+            <label>Comment:</label><br />
+            <textarea name="comment"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Send" />
+        </p>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿@using Lab5TRKVD.Models
+@using Lab5TRKVD.ViewModels
+@model List<PersonModel>
+<style>
+    td {
+        padding: 5px;
+    }
+
+    tr:nth-child(even) {
+        background: #CCC;
+    }
+
+    tr:nth-child(odd) {
+        background: #FFF;
+    }
+</style>
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Age</td>
+        <td>Company</td>
+        <td>Country</td>
+    </tr>
+    @foreach (var person in Model)
+    {
+        <tr>
+            <td>@person.Id</td>
+            <td>@person.Name</td>
+            <td>@person.Age</td>
+            <td>@person.Company</td>
+            <td>@person.Country</td>
+        </tr>
+    }
+</table>
